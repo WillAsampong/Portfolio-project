@@ -1,4 +1,4 @@
-import pic from '../assets/vlcsnap-2023-01-07-18h19m20s099.png'
+// import pic from '../assets/vlcsnap-2023-01-07-18h19m20s099.png'
 
 import GithubSVG from "./SVGs/GithubSVG"
 import InstagramSVG from "./SVGs/InstagramSVG"
@@ -31,7 +31,7 @@ const Hero = () => {
                 </div>
             </div>
             <div className="hero-img flex-1 rounded-full">
-                <img src={pic} alt="" className=''/>
+                <img src="{pic}" alt="" className=''/>
             </div>
         </div>
     </section>
