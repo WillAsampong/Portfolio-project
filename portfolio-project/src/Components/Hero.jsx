@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <section className="-mt-10 flex h-screen items-center w-4/5 mx-auto">
         <div className="hero flex-1">
-            <span className="text-gray-600 text-xs flex items-center gap-x-5 uppercase "><svg width="20" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <span className="text-gray-600 text-xs flex items-center gap-x-5 uppercase tracking-[0.25em]"><svg width="20" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="16" height="2" fill="#D9D9D9"/>
                 </svg>My name is
             </span>

@@ -4,3 +4,8 @@
     font-family: "Inter", serif;
     /* outline: 2px solid blue; */
 }
+
+html {
+    scroll-behavior: smooth;
+  }
+  
