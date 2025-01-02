@@ -3,7 +3,6 @@ import { useEffect, useState } from "react"
 import HamburgerSVG from './SVGs/HamburgerSVG'
 import CloseSVG from './SVGs/CloseSVG'
 import GithubSVG from "./SVGs/GithubSVG"
-import InstagramSVG from "./SVGs/InstagramSVG"
 import LinkedInSVG from "./SVGs/LinkedInSVG"
 import TwitterSVG from "./SVGs/TwitterSVG"
 
@@ -88,8 +87,7 @@ const Header = () => {
                   </li>
                 ))}
                 <div className="flex gap-x-6 mt-10">
-                  <InstagramSVG />
-                  <GithubSVG />
+                  <a href="https://github.com/WillAsampong" target="blank"><GithubSVG /></a>
                   <TwitterSVG />
                   <LinkedInSVG />
                 </div>

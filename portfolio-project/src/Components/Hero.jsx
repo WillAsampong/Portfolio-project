@@ -1,7 +1,5 @@
 // import pic from '../assets/vlcsnap-2023-01-07-18h19m20s099.png'
-
 import GithubSVG from "./SVGs/GithubSVG"
-import InstagramSVG from "./SVGs/InstagramSVG"
 import LinkedInSVG from "./SVGs/LinkedInSVG"
 import TwitterSVG from "./SVGs/TwitterSVG"
 
@@ -24,8 +22,7 @@ const Hero = () => {
                     <p>Welcome to my portfolio! I’m Asampong Godswill Nana, a second-year Computer Science and Statistics student at the University of Ghana. I’m passionate about web development and data analytics, with experience in building responsive websites and exploring data to uncover insights. Take a look at my projects and feel free to connect!</p>
                 </div>
                 <div className="social-links md:flex gap-x-6 mt-10 justify-center md:justify-start hidden">
-                    <InstagramSVG />
-                    <GithubSVG />
+                    <a href="https://github.com/WillAsampong" target="blank"><GithubSVG /></a>
                     <TwitterSVG />
                     <LinkedInSVG />
                 </div>
