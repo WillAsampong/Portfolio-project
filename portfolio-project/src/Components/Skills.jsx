@@ -6,17 +6,17 @@ import GlobeSVG from "./SVGs/GlobeSVG";
 
 const Skills = () => {
   return (
-    <section className="h-[600px] bg-[#FBFBFB]" id="skills">
+    <section className="md:h-[600px] bg-[#FBFBFB]" id="skills">
       <div className="flex items-center justify-center gap-x-5 pt-10">
         <svg width="20" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="16" height="2" fill="#D9D9D9" />
         </svg>
         <p className="uppercase text-gray-500 tracking-[0.25em]">Skills</p>
       </div>
-      <div className="w-4/5 mx-auto flex flex-col items-center">
+      <div className="w-full md:w-4/5 mx-auto flex flex-col items-center">
         <h2 className="font-bold text-4xl mt-5 mb-20 text-center">Specialized In</h2>
-        <div className="flex items-center justify-center gap-x-6 flex-wrap">
-          <div className="skill-card flex-1 flex flex-col items-center gap-y-4 py-10 px-5 rounded-md bg-white">
+        <div className="flex items-center justify-center md:gap-x-6 gap-y-4 flex-wrap mb-10 md:mb-0">
+          <div className="skill-card md:flex-1 flex flex-col items-center gap-y-4 py-10 px-5 rounded-md bg-white">
             <div className="web-icon bg-[#F5F3FE] p-4 rounded-lg">
               <GlobeSVG />
             </div>
@@ -27,7 +27,7 @@ const Skills = () => {
               <p className="text-wrap text-sm text-center">Building dynamic, responsive, and accessible websites using modern technologies.</p>
             </div>
           </div>
-          <div className="skill-card flex-1 flex flex-col items-center gap-y-4 py-10 px-5 rounded-md bg-white">
+          <div className="skill-card md:flex-1 flex flex-col items-center gap-y-4 py-10 px-5 rounded-md bg-white">
             <div className="web-icon bg-[#F5F3FE] p-4 rounded-lg">
               <AnalyticsSVG />
             </div>
@@ -38,7 +38,7 @@ const Skills = () => {
               <p className="text-wrap text-sm text-center">Analyzing complex datasets to provide informed insights for decision-making.</p>
             </div>
           </div>
-          <div className="skill-card flex-1 flex flex-col items-center gap-y-4 py-10 px-5 rounded-md bg-white">
+          <div className="skill-card md:flex-1 flex flex-col items-center gap-y-4 py-10 px-5 rounded-md bg-white">
             <div className="web-icon bg-[#F5F3FE] p-4 rounded-lg">
               <GitSVG1 />
             </div>

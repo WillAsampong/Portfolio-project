@@ -2,15 +2,15 @@ import pic from '../assets/keyboard-coffee-desk-monitor.jpg'
 
 const About = () => {
   return (
-    <section className="h-[600px]" id='about'>
-        <div className="w-4/5 mx-auto">
+    <section className="md:h-[600px]" id='about'>
+        <div className="md:w-4/5 mx-auto px-4 md:px-0">
             <div className="flex items-center justify-center gap-x-5 pt-10 mb-10">
                 <svg width="20" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="16" height="2" fill="#D9D9D9"/>
                 </svg>
                 <p className="uppercase text-gray-500">About me</p>
             </div>
-            <div className="flex">
+            <div className=" flex md:flex-row flex-col">
                 <div className="about-img flex-1">
                     <img src={pic} alt="" className='rounded-md'/>
                 </div>

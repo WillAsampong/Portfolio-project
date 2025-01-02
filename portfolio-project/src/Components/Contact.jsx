@@ -4,15 +4,15 @@ import EmailSVG from './SVGs/EmailSVG'
 
 const Contact = () => {
   return (
-    <section className="bg-white h-[600px]" id='contact'>
-        <div className="w-4/5 mx-auto ">
+    <section className="bg-white md:h-[600px]" id='contact'>
+        <div className="md:w-4/5 mx-auto px-4 md:px-0">
             <div className="flex items-center gap-x-5 pt-10 mb-10">
                 <svg width="20" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="16" height="2" fill="#D9D9D9"/>
                 </svg>
                 <p className="uppercase text-gray-500">Get in touch</p>
             </div>
-            <div className="flex justify-around">
+            <div className="md:flex-row md:flex justify-around flex-col-reverse">
                 <div className="contact-form flex-1">
                     <form action="" className="flex flex-col gap-y-4">
                         <input type="text" placeholder="Name" className="bg-[#FBFBFB] outline-none border-none py-4 px-2"/>
@@ -21,7 +21,7 @@ const Contact = () => {
                         <button className="bg-[#7E74F1] text-white border-none rounded-md py-3">Send Message</button>
                     </form>
                 </div>
-                <div className="get-in-touch flex-1 ml-6 flex flex-col gap-y-12">
+                <div className="get-in-touch mt-6 md:flex-1 md:ml-6 flex flex-col gap-y-12">
                     <div className="info-box flex items-center gap-x-6">
                         <div className="bg-[#F5F3FE] p-4 rounded-md">
                             <AddressSVG />
