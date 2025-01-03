@@ -88,7 +88,7 @@ const Header = () => {
                 ))}
                 <div className="flex gap-x-6 mt-10">
                   <a href="https://github.com/WillAsampong" target="blank"><GithubSVG /></a>
-                  <TwitterSVG />
+                  <a href="https://x.com/WillAsampong19" target="blank"><TwitterSVG /></a>
                   <LinkedInSVG />
                 </div>
               </ul>
