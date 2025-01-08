@@ -18,7 +18,7 @@ const Hero = () => {
                     <span></span>
                 </div>
                 <div className="mt-5">
-                    <p className="text-wrap italic text-sm">&apos;Crafting modern web experiences and analyzing data to uncover insights..&apos;</p>
+                    <p className="text-wrap italic text-sm">{"'Crafting modern web experiences and analyzing data to uncover insights..'"}</p>
                     <p>Welcome to my portfolio! I’m Asampong Godswill Nana, a second-year Computer Science and Statistics student at the University of Ghana. I’m passionate about web development and data analytics, with experience in building responsive websites and exploring data to uncover insights. Take a look at my projects and feel free to connect!</p>
                 </div>
                 <div className="social-links md:flex gap-x-6 mt-10 justify-center md:justify-start hidden">

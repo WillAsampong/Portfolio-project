@@ -28,10 +28,13 @@ const Header = () => {
     setOpen(!open);
     console.log('yah')
   }
+  const closeMenu = () => {
+    setOpen(false)
+  }
 
   const navlinks = [
     {
-      name: "Services",
+      name: "Skills",
       link: "#skills",
     },
     {
@@ -83,7 +86,7 @@ const Header = () => {
               <ul className="flex flex-col gap-y-6">
                 {navlinks.map((item) => (
                   <li key={item.name} className="hover:text-[#7E74F1] text-2xl font-semibold transition-all duration-500">
-                    <a href={item.link}>{item.name}</a>
+                    <a href={item.link} onClick={closeMenu}>{item.name}</a>
                   </li>
                 ))}
                 <div className="flex gap-x-6 mt-10">

@@ -13,7 +13,7 @@ const Skills = () => {
         </svg>
         <p className="uppercase text-gray-500 tracking-[0.25em]">Skills</p>
       </div>
-      <div className="w-full md:w-4/5 mx-auto flex flex-col items-center">
+      <div className="w-4/5 mx-auto flex flex-col items-center">
         <h2 className="font-bold text-4xl mt-5 mb-20 text-center">Specialized In</h2>
         <div className="flex items-center justify-center md:gap-x-6 gap-y-4 flex-wrap mb-10 md:mb-0">
           <div className="skill-card md:flex-1 flex flex-col items-center gap-y-4 py-10 px-5 rounded-md bg-white shadow-md">
