@@ -32,7 +32,7 @@ const Skills = () => {
               <span className="bg-[#7E74F1] rounded py-1 px-2 shadow-sm text-white text-xs">JS</span>
               <span className="bg-[#7E74F1] rounded py-1 px-2 shadow-sm text-white text-xs">React</span>
               <span className="bg-[#7E74F1] rounded py-1 px-2 shadow-sm text-white text-xs">Tailwind</span>
-              <span className="bg-[#7E74F1] rounded py-1 px-2 shadow-sm text-white text-xs">TypeScript</span>
+              {/* <span className="bg-[#7E74F1] rounded py-1 px-2 shadow-sm text-white text-xs">TypeScript</span> */}
             </div>
           </div>
           <div className="skill-card md:flex-1 flex flex-col items-center gap-y-4 py-10 px-5 rounded-md bg-white shadow-md
