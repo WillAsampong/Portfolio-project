@@ -5,6 +5,7 @@ import CloseSVG from './SVGs/CloseSVG'
 import GithubSVG from "./SVGs/GithubSVG"
 import LinkedInSVG from "./SVGs/LinkedInSVG"
 import TwitterSVG from "./SVGs/TwitterSVG"
+import { motion } from "motion/react"
 
 const Header = () => {
 
@@ -28,6 +29,7 @@ const Header = () => {
     setOpen(!open);
     console.log('yah')
   }
+
   const closeMenu = () => {
     setOpen(false)
   }
@@ -51,6 +53,29 @@ const Header = () => {
     }
   ]
 
+  const menuVariants = {
+    open: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        duration: 0.3
+      }
+    },
+    closed: {
+      x: '-100%',
+      opacity: 0,
+      transition: {
+        ease: 'easeInOut',
+        duration: 0.3,
+      }
+    }
+  }
+
+  const itemVariants = {
+    open: { opacity: 1, x: 0 },
+    closed: { opacity: 0, x: '-110%' },
+  }
 
   return (
     <header className={`py-4 px-2 md:px-0 ${shadow ? 'shadow-md' : ''} fixed top-0 left-0 right-0 bg-white z-50 transition-shadow duration-300`}>
@@ -75,7 +100,7 @@ const Header = () => {
             ))}
           </ul>
 
-          <div className="md:hidden" onClick={isOpen}>
+          <div className="mobile-menu-btn md:hidden" onClick={isOpen}>
             {open ? <CloseSVG /> : <HamburgerSVG />}
           </div>
           
@@ -83,18 +108,29 @@ const Header = () => {
 
           <div className={`mobile-menu absolute ${ open ? "left-0" : "-left-full " } transition-all duration-500 top-16 w-full h-screen bg-white md:hidden`}>
             <div className="md:hidden absolute top-0 left-6 translate-y-1/2 ">
-              <ul className="flex flex-col gap-y-6">
+              <motion.ul 
+              className="flex flex-col gap-y-6"
+              variants={menuVariants}
+              initial='closed'
+              animate={open ? 'open' : 'closed'}
+              >
                 {navlinks.map((item) => (
-                  <li key={item.name} className="hover:text-[#7E74F1] text-2xl font-semibold transition-all duration-500">
+                  <motion.li 
+                  key={item.name} 
+                  className="hover:text-[#7E74F1] text-2xl font-semibold transition-all duration-500"
+                  variants={itemVariants}
+                  >
                     <a href={item.link} onClick={closeMenu}>{item.name}</a>
-                  </li>
+                  </motion.li>
                 ))}
-                <div className="flex gap-x-6 mt-10">
-                  <a href="https://github.com/WillAsampong" target="blank"><GithubSVG /></a>
-                  <a href="https://x.com/WillAsampong19" target="blank"><TwitterSVG /></a>
-                  <LinkedInSVG />
-                </div>
-              </ul>
+              </motion.ul>
+              <motion.div 
+              className="flex gap-x-6 mt-10"
+              >
+                <a href="https://github.com/WillAsampong" target="blank"><GithubSVG /></a>
+                <a href="https://x.com/WillAsampong19" target="blank"><TwitterSVG /></a>
+                <LinkedInSVG />
+              </motion.div>
             </div>
           </div>
 

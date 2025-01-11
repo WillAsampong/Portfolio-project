@@ -1,38 +1,129 @@
-// import pic from '../assets/vlcsnap-2023-01-07-18h19m20s099.png'
-import GithubSVG from "./SVGs/GithubSVG"
-import LinkedInSVG from "./SVGs/LinkedInSVG"
-import TwitterSVG from "./SVGs/TwitterSVG"
+import GithubSVG from "./SVGs/GithubSVG";
+import LinkedInSVG from "./SVGs/LinkedInSVG";
+import TwitterSVG from "./SVGs/TwitterSVG";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
     <section className="">
-        <div className='w-full md:-mt-10 flex md:flex md:flex-row flex-col-reverse h-screen items-center md:w-4/5 mx-auto'>
-            <div className="hero flex-1 px-4 md:px-0">
-                <span className="text-gray-600 text-xs md:flex items-center gap-x-5 uppercase tracking-[0.25em] hidden"><svg width="20" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="16" height="2" fill="#D9D9D9"/>
-                    </svg>My name is
-                </span>
-                <div>
-                    <h1 className="text-4xl font-bold mt-5">Asampong Godswill</h1>
-                    <p className="text-sm text-gray-900">Aspiring Software Engineer & Data Analyst/Scientist</p>
-                    <span></span>
-                </div>
-                <div className="mt-5">
-                    <p className="text-wrap italic text-sm">{"'Crafting modern web experiences and analyzing data to uncover insights..'"}</p>
-                    <p>Welcome to my portfolio! I’m Asampong Godswill Nana, a second-year Computer Science and Statistics student at the University of Ghana. I’m passionate about web development and data analytics, with experience in building responsive websites and exploring data to uncover insights. Take a look at my projects and feel free to connect!</p>
-                </div>
-                <div className="social-links md:flex gap-x-6 mt-10 justify-center md:justify-start hidden">
-                    <a href="https://github.com/WillAsampong" target="blank"><GithubSVG /></a>
-                    <TwitterSVG />
-                    <LinkedInSVG />
-                </div>
-            </div>
-            <div className="hero-img flex-1 rounded-full">
-                <img src="{pic}" alt="" className=''/>
-            </div>
-        </div>
-    </section>
-  )
-}
+      <div className="w-full md:-mt-10 flex md:flex md:flex-row flex-col-reverse h-screen items-center md:w-4/5 mx-auto md:justify-between">
+        {/* Text Section */}
+        <div className="hero flex-1 px-4 md:px-0">
+          <motion.span 
+          className="text-gray-600 text-xs md:flex items-center gap-x-5 uppercase tracking-[0.25em] hidden"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0, }}
+          transition={{
+            delay: 0.5,
+            duration: 0.3
+          }}
+          >
+            <svg
+              width="20"
+              height="2"
+              viewBox="0 0 16 2"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="16" height="2" fill="#D9D9D9" />
+            </svg>
+            My name is
+          </motion.span>
 
-export default Hero
+          {/* Animated Heading */}
+          <motion.div
+            initial={{ x: "-100%", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 0.3,
+              duration: 2,
+              type: "spring",
+              stiffness: 80,
+            }}
+          >
+            <h1 className="text-4xl font-bold mt-5">Asampong Godswill</h1>
+            <p className="text-sm text-gray-900">
+              Aspiring Software Engineer & Data Analyst/Scientist
+            </p>
+          </motion.div>
+
+          {/* Animated Description */}
+          <motion.div
+            className="mt-5"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7, duration: 1, ease: "easeOut" }}
+          >
+            <p className="text-wrap italic text-sm">
+              {"'Crafting modern web experiences and analyzing data to uncover insights..'"}
+            </p>
+            <p>
+              Welcome to my portfolio! I’m Asampong Godswill Nana, a second-year
+              Computer Science and Statistics student at the University of Ghana.
+              I’m passionate about web development and data analytics, with experience
+              in building responsive websites and exploring data to uncover insights.
+              Take a look at my projects and feel free to connect!
+            </p>
+          </motion.div>
+
+          {/* Social Links */}
+          <motion.div
+            className="social-links md:flex gap-x-6 mt-10 justify-center md:justify-start hidden"
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: {
+                  delayChildren: 1.2,
+                  staggerChildren: 0.3,
+                },
+              },
+            }}
+          >
+            <motion.a
+              href="https://github.com/WillAsampong"
+              target="blank"
+              whileHover={{ scale: 1.1, rotate: 5 }}
+              transition={{ type: "spring", stiffness: 200 }}
+            >
+              <GithubSVG />
+            </motion.a>
+            <motion.a
+              href="https://x.com/WillAsampong19"
+              target="blank"
+              whileHover={{ scale: 1.1, rotate: 5 }}
+              transition={{ type: "spring", stiffness: 200 }}
+            >
+              <TwitterSVG />
+            </motion.a>
+            <motion.a
+              href=""
+              whileHover={{ scale: 1.1, rotate: 5 }}
+              transition={{ type: "spring", stiffness: 200 }}
+            >
+              <LinkedInSVG />
+            </motion.a>
+          </motion.div>
+        </div>
+
+        {/* Hero Image */}
+        <motion.div
+          className="hero-img flex-1 rounded-full"
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{
+            delay: 1,
+            duration: 1,
+            ease: "easeOut",
+          }}
+        >
+          <img src="{pic}" alt="" className="w-64 rounded-full" />
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;

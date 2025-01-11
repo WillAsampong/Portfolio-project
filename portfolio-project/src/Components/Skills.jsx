@@ -1,22 +1,57 @@
 import AnalyticsSVG from "./SVGs/AnalyticsSVG";
 import GitSVG1 from "./SVGs/GitSVG1";
 import GlobeSVG from "./SVGs/GlobeSVG";
-// import DesignSVG from "./SVGs/DesignSVG"; // Replace with your SVG for UI/UX Design
-// import CloudSVG from "./SVGs/CloudSVG"; // Replace with your SVG for Cloud Computing
+import {  motion } from 'motion/react'
 
 const Skills = () => {
+  const cardVariants  = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.5,
+      }
+    }
+  }
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0 }
+  }
+
   return (
     <section className="md:h-[600px] bg-[#FBFBFB]" id="skills">
-      <div className="flex items-center justify-center gap-x-5 pt-10">
+      <motion.div 
+        className="flex items-center justify-center gap-x-5 pt-10"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3, delay: 0.2 }}
+        viewport={{ once: true }}
+      >
         <svg width="20" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="16" height="2" fill="#D9D9D9" />
         </svg>
         <p className="uppercase text-gray-500 tracking-[0.25em]">Skills</p>
-      </div>
+      </motion.div>
       <div className="w-4/5 mx-auto flex flex-col items-center">
-        <h2 className="font-bold text-4xl mt-5 mb-20 text-center">Specialized In</h2>
-        <div className="flex items-center justify-center md:gap-x-6 gap-y-4 flex-wrap mb-10 md:mb-0">
-          <div className="skill-card md:flex-1 flex flex-col items-center gap-y-4 py-10 px-5 rounded-md bg-white shadow-md">
+        <motion.h2 
+          className="font-bold text-4xl mt-5 mb-20 text-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: 0.3 }}
+          viewport={{ once: true }}
+        >Specialized In</motion.h2>
+        <motion.div 
+        className="flex items-center justify-center md:gap-x-6 gap-y-4 flex-wrap mb-10 md:mb-0"
+        variants={cardVariants}
+        initial='hidden'
+        whileInView='visible'
+        transition={{ delay: 0.3, duration: 0.5 }}
+        viewport={{ once: true }}
+        >
+          <motion.div className="skill-card md:flex-1 flex flex-col items-center gap-y-4 py-10 px-5 rounded-md bg-white shadow-md"
+          variants={itemVariants}
+          >
             <div className="web-icon bg-[#F5F3FE] p-4 rounded-lg">
               <GlobeSVG />
             </div>
@@ -34,9 +69,11 @@ const Skills = () => {
               <span className="bg-[#7E74F1] rounded py-1 px-2 shadow-sm text-white text-xs">Tailwind</span>
               {/* <span className="bg-[#7E74F1] rounded py-1 px-2 shadow-sm text-white text-xs">TypeScript</span> */}
             </div>
-          </div>
-          <div className="skill-card md:flex-1 flex flex-col items-center gap-y-4 py-10 px-5 rounded-md bg-white shadow-md
-          ">
+          </motion.div>
+          <motion.div className="skill-card md:flex-1 flex flex-col items-center gap-y-4 py-10 px-5 rounded-md bg-white shadow-md
+          "
+          variants={itemVariants}
+          >
             <div className="web-icon bg-[#F5F3FE] p-4 rounded-lg">
               <AnalyticsSVG />
             </div>
@@ -50,8 +87,10 @@ const Skills = () => {
               <span className="bg-[#7E74F1] rounded py-1 px-2 shadow-sm text-white text-xs">Python</span>
               <span className="bg-[#7E74F1] rounded py-1 px-2 shadow-sm text-white text-xs">R</span>
             </div>
-          </div>
-          <div className="skill-card md:flex-1 flex flex-col items-center gap-y-4 py-10 px-5 rounded-md bg-white shadow-md">
+          </motion.div>
+          <motion.div className="skill-card md:flex-1 flex flex-col items-center gap-y-4 py-10 px-5 rounded-md bg-white shadow-md"
+          variants={itemVariants}
+          >
             <div className="web-icon bg-[#F5F3FE] p-4 rounded-lg">
               <GitSVG1 />
             </div>
@@ -65,8 +104,8 @@ const Skills = () => {
               <span className="bg-[#7E74F1] rounded py-1 px-2 shadow-sm text-white text-xs">Git</span>
               <span className="bg-[#7E74F1] rounded py-1 px-2 shadow-sm text-white text-xs">Github</span>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
