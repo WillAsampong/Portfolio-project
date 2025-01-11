@@ -119,7 +119,7 @@ const Hero = () => {
             ease: "easeOut",
           }}
         >
-          <img src="{pic}" alt="" className="w-64 rounded-full" />
+          {/* <img src="{pic}" alt="" className="w-64 rounded-full" /> */}
         </motion.div>
       </div>
     </section>
