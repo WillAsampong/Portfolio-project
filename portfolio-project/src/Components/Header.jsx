@@ -107,7 +107,7 @@ const Header = () => {
           {/* Mobile menu */}
 
           <div className={`mobile-menu absolute ${ open ? "left-0" : "-left-full " } transition-all duration-500 top-16 w-full h-screen bg-white md:hidden`}>
-            <div className="md:hidden absolute top-0 left-6 translate-y-1/2 ">
+            <div className="md:hidden absolute top-0 left-10 translate-y-1/2 ">
               <motion.ul 
               className="flex flex-col gap-y-6"
               variants={menuVariants}
