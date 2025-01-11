@@ -9,7 +9,7 @@ const Skills = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.8,
+        staggerChildren: 0.5,
       }
     }
   }
@@ -20,7 +20,7 @@ const Skills = () => {
   }
 
   return (
-    <section className="md:h-[600px] bg-[#FBFBFB]" id="skills">
+    <section className="md:h-screen bg-[#FBFBFB]" id="skills">
       <motion.div 
         className="flex items-center justify-center gap-x-5 pt-10"
         initial={{ opacity: 0, y: 30 }}
@@ -38,7 +38,7 @@ const Skills = () => {
           className="font-bold text-4xl mt-5 mb-20 text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3, delay: 0.3 }}
+          transition={{ duration: 0.3, delay: 0.4 }}
           viewport={{ once: true }}
         >Specialized In</motion.h2>
         <motion.div 
@@ -46,7 +46,7 @@ const Skills = () => {
         variants={cardVariants}
         initial='hidden'
         whileInView='visible'
-        transition={{ delay: 0.3, duration: 0.5 }}
+        transition={{ delay: 0.5, duration: 0.5 }}
         viewport={{ once: true }}
         >
           <motion.div className="skill-card md:flex-1 flex flex-col items-center gap-y-4 py-10 px-5 rounded-md bg-white shadow-md"
