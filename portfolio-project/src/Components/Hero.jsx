@@ -48,22 +48,28 @@ const Hero = () => {
           </motion.div>
 
           {/* Animated Description */}
-          <motion.div
+          <motion.div className="">
+            <motion.p 
+            className="text-wrap italic text-sm"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 1, ease: "easeIn" }}
+            >
+            <br/>
+              {"'Crafting modern web experiences and analyzing data to uncover insights..'"}
+            </motion.p>
+            <motion.p
             className="mt-5"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7, duration: 1, ease: "easeOut" }}
-          >
-            <p className="text-wrap italic text-sm">
-              {"'Crafting modern web experiences and analyzing data to uncover insights..'"}
-            </p>
-            <p>
+            transition={{ delay: 2, duration: 1, ease: "easeOut" }}
+            >
               Welcome to my portfolio! I’m Asampong Godswill Nana, a second-year
               Computer Science and Statistics student at the University of Ghana.
               I’m passionate about web development and data analytics, with experience
               in building responsive websites and exploring data to uncover insights.
               Take a look at my projects and feel free to connect!
-            </p>
+            </motion.p>
           </motion.div>
 
           {/* Social Links */}
@@ -72,11 +78,12 @@ const Hero = () => {
             initial="hidden"
             animate="visible"
             variants={{
-              hidden: { opacity: 0 },
+              hidden: { opacity: 0, x: -50 },
               visible: {
                 opacity: 1,
+                x: 0,
                 transition: {
-                  delayChildren: 1.2,
+                    delay: 0.5,
                   staggerChildren: 0.3,
                 },
               },
