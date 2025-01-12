@@ -27,7 +27,7 @@ const About = () => {
                 >
                     <img src={pic} alt="" className='rounded-md'/>
                 </motion.div>
-                <div className="text flex-1 p-6 items-center">
+                <div className="text flex-1 p-2 md:p-6 items-center">
                     <motion.h4 
                     className="font-bold text-2xl mb-5"
                     initial={{ opacity: 0, y: 50 }}
