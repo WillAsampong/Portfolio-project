@@ -134,6 +134,7 @@ const Contact = () => {
                 variants={contactVariants}
                 initial="hidden"
                 whileInView="visible"
+                viewport={{ once: true }}
                 >
                     <motion.div
                      className="info-box flex items-center gap-x-6"
