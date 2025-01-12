@@ -92,7 +92,7 @@ const Hero = () => {
             <motion.a
               href="https://github.com/WillAsampong"
               target="blank"
-              whileHover={{ scale: 1.1, rotate: 5 }}
+              whileHover={{ scale: 1.1 }}
               transition={{ type: "spring", stiffness: 200 }}
             >
               <GithubSVG />
@@ -100,14 +100,14 @@ const Hero = () => {
             <motion.a
               href="https://x.com/WillAsampong19"
               target="blank"
-              whileHover={{ scale: 1.1, rotate: 5 }}
+              whileHover={{ scale: 1.1 }}
               transition={{ type: "spring", stiffness: 200 }}
             >
               <TwitterSVG />
             </motion.a>
             <motion.a
               href=""
-              whileHover={{ scale: 1.1, rotate: 5 }}
+              whileHover={{ scale: 1.1 }}
               transition={{ type: "spring", stiffness: 200 }}
             >
               <LinkedInSVG />
