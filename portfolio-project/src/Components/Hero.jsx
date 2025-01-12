@@ -119,7 +119,7 @@ const Hero = () => {
         {/* Hero Image */}
         <div className="flex-1 w-auto flex justify-center items-center">
           <motion.div
-            className="hero-img aspect-square rounded-full w-[180px] md:w-[280px]"
+            className="hero-img aspect-square rounded-full w-[200px] md:w-[280px]"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{
