@@ -36,18 +36,18 @@ const Skills = () => {
       </motion.div>
       <div className=" mx-auto flex flex-col items-center">
         <motion.h2 
-          className="font-bold text-4xl mt-5 mb-20 text-center"
+          className="font-bold text-3xl md:text-4xl mt-5 mb-20 text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 0.4 }}
           viewport={{ once: true }}
         >Specialized In</motion.h2>
         <motion.div 
-        className="flex items-center justify-center md:gap-x-6 gap-y-6 flex-wrap mb-10 mx-2 md:mb-0"
+        className="flex items-center justify-center md:gap-x-6 gap-y-6 flex-wrap mb-10 mx-2 md:mb-0 md:w-4/5"
         variants={cardVariants}
         initial='hidden'
         whileInView='visible'
-        transition={{ delay: 0.5, duration: 0.5 }}
+        transition={{ delay: 0.5, duration: 0.7 }}
         viewport={{ once: true }}
         >
           <motion.div className="skill-card md:flex-1 flex flex-col items-center gap-y-4 py-10 px-5 rounded-md bg-white shadow-md"

@@ -42,7 +42,7 @@ const Hero = () => {
               stiffness: 80,
             }}
           >
-            <h1 className="text-4xl font-bold mt-5">Asampong Godswill</h1>
+            <h1 className="text-2xl md:text-4xl font-bold mt-5">Asampong <span className='text-[#7E74F1]'>Godswill N.</span></h1>
             <p className="text-sm text-gray-900">
               Aspiring Software Engineer & Data Analyst/Scientist
             </p>
@@ -63,7 +63,7 @@ const Hero = () => {
             className="mt-5"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 2, duration: 1, ease: "easeOut" }}
+            transition={{ delay: 1.7, duration: 1, ease: "easeOut" }}
             >
               Welcome to my portfolio! I’m Asampong Godswill Nana, a second-year
               Computer Science and Statistics student at the University of Ghana.
@@ -119,7 +119,7 @@ const Hero = () => {
         {/* Hero Image */}
         <div className="flex-1 w-auto flex justify-center items-center">
           <motion.div
-            className="hero-img aspect-square rounded-full w-[200px] md:w-[280px]"
+            className="hero-img aspect-square rounded-full w-[200px] md:w-[280px] relative"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{
@@ -128,7 +128,8 @@ const Hero = () => {
               ease: "easeOut",
             }}
           >
-            <img src={pic} alt="" className="rounded-full w-full h-full object-cover" />
+            <img src={pic} alt="" className="rounded-full w-full h-full object-cover absolute z-10" />
+            <div className='rounded-full w-full h-full bg-[#7E74F1] absolute -top-2 left-3 -z-0'></div>
           </motion.div>
         </div>
       </div>
