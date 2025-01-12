@@ -6,7 +6,7 @@ const Modal = ({ isOpen, onClose, children }) => {
     if(!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-20 h-14">
+    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-20">
         {/* modal */}
         <motion.div
          className="bg-white rounded-xl p-8 shadow-lg max-w-sm w-full relative"
