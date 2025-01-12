@@ -29,7 +29,7 @@ const About = () => {
                 </motion.div>
                 <div className="text flex-1 p-2 md:p-6 items-center">
                     <motion.h4 
-                    className="font-bold text-2xl mb-5"
+                    className="font-bold text-2xl my-5"
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4, duration: 0.3 }}
