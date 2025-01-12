@@ -1,3 +1,4 @@
+import pic from '../assets/profile-pic.jpg'
 import GithubSVG from "./SVGs/GithubSVG";
 import LinkedInSVG from "./SVGs/LinkedInSVG";
 import TwitterSVG from "./SVGs/TwitterSVG";
@@ -6,7 +7,7 @@ import { motion } from "framer-motion";
 const Hero = () => {
   return (
     <section className="">
-      <div className="w-full md:-mt-10 flex md:flex md:flex-row flex-col-reverse h-screen items-center md:w-4/5 mx-auto md:justify-between">
+      <div className="w-full md:-mt-10 flex md:flex md:flex-row flex-col-reverse h-screen items-center md:w-4/5 mx-auto md:justify-between gap-x-8 mt-20">
         {/* Text Section */}
         <div className="hero flex-1 px-4 md:px-0">
           <motion.span 
@@ -116,18 +117,20 @@ const Hero = () => {
         </div>
 
         {/* Hero Image */}
-        <motion.div
-          className="hero-img flex-1 rounded-full"
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{
-            delay: 1,
-            duration: 1,
-            ease: "easeOut",
-          }}
-        >
-          {/* <img src="{pic}" alt="" className="w-64 rounded-full" /> */}
-        </motion.div>
+        <div className="flex-1 w-auto flex justify-center items-center">
+          <motion.div
+            className="hero-img aspect-square rounded-full w-[180px] md:w-[280px]"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{
+              delay: 1,
+              duration: 1,
+              ease: "easeOut",
+            }}
+          >
+            <img src={pic} alt="" className="rounded-full w-full h-full object-cover" />
+          </motion.div>
+        </div>
       </div>
     </section>
   );
