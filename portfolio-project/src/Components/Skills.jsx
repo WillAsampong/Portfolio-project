@@ -42,7 +42,7 @@ const Skills = () => {
           viewport={{ once: true }}
         >Specialized In</motion.h2>
         <motion.div 
-        className="flex items-center justify-center md:gap-x-6 gap-y-4 flex-wrap mb-10 mx-2 md:mb-0"
+        className="flex items-center justify-center md:gap-x-6 gap-y-6 flex-wrap mb-10 mx-2 md:mb-0"
         variants={cardVariants}
         initial='hidden'
         whileInView='visible'
