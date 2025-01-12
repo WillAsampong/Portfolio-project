@@ -27,12 +27,11 @@ const Header = () => {
 
   const isOpen = () => {
     setOpen(!open);
-    console.log('yah')
   }
 
-  const closeMenu = () => {
-    setOpen(false)
-  }
+  // const closeMenu = () => {
+  //   setOpen(false)
+  // }
 
   const navlinks = [
     {
@@ -120,12 +119,15 @@ const Header = () => {
                   className="hover:text-[#7E74F1] text-2xl font-semibold transition-all duration-500"
                   variants={itemVariants}
                   >
-                    <a href={item.link} onClick={closeMenu}>{item.name}</a>
+                    <a href={item.link} onClick={() => setOpen(false)}>{item.name}</a>
                   </motion.li>
                 ))}
               </motion.ul>
               <motion.div 
-              className="flex gap-x-6 mt-10"
+              className="flex items-end gap-x-6 mt-10"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 1 }}
               >
                 <a href="https://github.com/WillAsampong" target="blank"><GithubSVG /></a>
                 <a href="https://x.com/WillAsampong19" target="blank"><TwitterSVG /></a>

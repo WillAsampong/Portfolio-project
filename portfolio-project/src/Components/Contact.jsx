@@ -62,9 +62,10 @@ const Contact = () => {
             opacity: 1,
             y: 0,
             transition: {
-                staggerChildren: 0.3,
-                duration: 0.3,
-                ease: 'easeIn'
+                staggerChildren: 0.5,
+                duration: 0.5,
+                delay: 0.5,
+                ease: 'easeIn',
             }
         }
     }
@@ -134,6 +135,7 @@ const Contact = () => {
                 variants={contactVariants}
                 initial="hidden"
                 whileInView="visible"
+                transition={{ delay: 0.5 }}
                 viewport={{ once: true }}
                 >
                     <motion.div
