@@ -33,7 +33,7 @@ const Skills = () => {
         </svg>
         <p className="uppercase text-gray-500 tracking-[0.25em]">Skills</p>
       </motion.div>
-      <div className="w-4/5 mx-auto flex flex-col items-center">
+      <div className=" mx-auto flex flex-col items-center">
         <motion.h2 
           className="font-bold text-4xl mt-5 mb-20 text-center"
           initial={{ opacity: 0, y: 30 }}
@@ -42,7 +42,7 @@ const Skills = () => {
           viewport={{ once: true }}
         >Specialized In</motion.h2>
         <motion.div 
-        className="flex items-center justify-center md:gap-x-6 gap-y-4 flex-wrap mb-10 md:mb-0"
+        className="flex items-center justify-center md:gap-x-6 gap-y-4 flex-wrap mb-10 mx-2 md:mb-0"
         variants={cardVariants}
         initial='hidden'
         whileInView='visible'
