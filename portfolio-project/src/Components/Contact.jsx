@@ -82,7 +82,7 @@ const Contact = () => {
                 <svg width="20" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="16" height="2" fill="#D9D9D9"/>
                 </svg>
-                <p className="uppercase text-gray-500">Get in touch</p>
+                <p className="uppercase text-gray-500 tracking-[2.5px]">Get in touch</p>
             </div>
             <div
              className="md:flex-row md:flex justify-around flex-col-reverse">

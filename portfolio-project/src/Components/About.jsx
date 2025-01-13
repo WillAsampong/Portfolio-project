@@ -15,7 +15,7 @@ const About = () => {
                 <svg width="20" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="16" height="2" fill="#D9D9D9"/>
                 </svg>
-                <p className="uppercase text-gray-500">About me</p>
+                <p className="uppercase text-gray-500 tracking-[2.5px]">About me</p>
             </motion.div>
             <div className="flex items-center md:flex-row flex-col">
                 <motion.div 
@@ -43,7 +43,7 @@ const About = () => {
                     >
                         <p className="">I&apos;m currently studying Computer Science and Statistics at the University of Ghana. With over three years of self-study experience, I specialize in web development using modern tools like HTML, CSS, JavaScript, React, and Tailwind. Additionally, I have a growing interest in data science and analytics, leveraging Python and R for insights. Based in Accra, Ghana, I&apos;m eager to collaborate, learn, and contribute to exciting projects.</p>
                         {/* <br/> */}
-                        <p className='mt-5'>Outside of coding, I enjoy exploring new technologies and brainstorming creative ideas for impactful solutions.</p>
+                        <p className='mt-5'>Outside of coding, I enjoy exploring emerging technologies, particularly in machine learning and AI, and brainstorming creative ideas to develop innovative and impactful solutions that address real-world challenges</p>
                     </motion.div>
                 </div>
             </div>
