@@ -118,19 +118,45 @@ const Hero = () => {
 
         {/* Hero Image */}
         <div className="flex-1 w-auto flex justify-center items-center">
+        <motion.div
+          className="hero-img aspect-square rounded-full w-[200px] md:w-[280px] relative"
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{
+            delay: 1,
+            duration: 1,
+            ease: "easeOut",
+          }}
+        >
+
+          {/* Background Animation */}
           <motion.div
-            className="hero-img aspect-square rounded-full w-[200px] md:w-[280px] relative"
-            initial={{ scale: 0.8, opacity: 0 }}
+            className="img-background rounded-full w-full h-full bg-[#7E74F1] absolute -top-2 left-3 -z-0"
+            style={{ transformOrigin: "top center" }} // Sets the pivot point to top-center
+            initial={{ rotate: -60, scale: 0.9, opacity: 1 }}
+            animate={{ rotate: [0, 20, -10, 0], scale: 1, opacity: 1 }}
+            transition={{
+              delay: 0.5, // Animates before the hero image
+              duration: 1.5,
+              ease: "easeInOut",
+            }}
+          ></motion.div>
+
+          {/* Hero Image */}
+          <motion.img
+            src={pic}
+            alt=""
+            className="rounded-full w-full h-full object-cover absolute z-10"
+            initial={{ scale: 0.8, opacity: 1 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{
               delay: 1,
               duration: 1,
               ease: "easeOut",
             }}
-          >
-            <img src={pic} alt="" className="rounded-full w-full h-full object-cover absolute z-10" />
-            <div className='rounded-full w-full h-full bg-[#7E74F1] absolute -top-2 left-3 -z-0'></div>
-          </motion.div>
+          />
+        </motion.div>
+
         </div>
       </div>
     </section>
