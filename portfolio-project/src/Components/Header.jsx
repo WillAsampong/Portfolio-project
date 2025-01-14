@@ -91,7 +91,7 @@ const Header = () => {
   }
 
   return (
-    <header className={`py-4 px-2 md:px-0 ${shadow ? 'shadow-md' : ''} fixed top-0 left-0 right-0 dark:bg-slate-950 bg-white text-black dark:text-white z-50 transition-shadow duration-300`}>
+    <header className={`py-4 px-2 md:px-0 ${shadow ? 'shadow-md' : ''} fixed top-0 left-0 right-0 dark:bg-[#1E1E1E] bg-white text-black dark:text-white z-50 transition-shadow duration-300`}>
       <div className="md:w-4/5 mx-auto flex justify-between items-center">
         <div className="flex items-center gap-x-2 cursor-pointer" onClick={pageUp}>
           <div className="name">

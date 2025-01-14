@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="">
+    <section className="text-black dark:text-white bg-white dark:bg-[#1E1E1E]">
       <div className="w-full md:-mt-10 flex md:flex md:flex-row flex-col-reverse h-screen items-center md:w-4/5 mx-auto md:justify-between gap-x-8 mt-20">
         {/* Text Section */}
         <div className="hero flex-1 px-4 md:px-0">
@@ -43,7 +43,7 @@ const Hero = () => {
             }}
           >
             <h1 className="text-2xl md:text-4xl font-bold mt-5">Asampong <span className='text-[#7E74F1]'>Godswill N.</span></h1>
-            <p className="text-sm text-gray-900">
+            <p className="text-sm text-gray-900 dark:text-white">
               Aspiring Software Engineer & Data Analyst/Scientist
             </p>
           </motion.div>
@@ -51,7 +51,7 @@ const Hero = () => {
           {/* Animated Description */}
           <motion.div className="">
             <motion.p 
-            className="text-wrap italic text-sm"
+            className="text-wrap italic text-sm "
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1, ease: "easeIn" }}

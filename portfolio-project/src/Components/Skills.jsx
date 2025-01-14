@@ -21,7 +21,7 @@ const Skills = () => {
   }
 
   return (
-    <section className="md:h-screen bg-[#FBFBFB]" id="skills">
+    <section className="md:h-screen bg-[#FBFBFB] dark:bg-[#1E1E1E]" id="skills">
       <motion.div 
         className="flex items-center justify-center gap-x-5 pt-10"
         initial={{ opacity: 0, y: 30 }}
@@ -36,12 +36,12 @@ const Skills = () => {
       </motion.div>
       <div className=" mx-auto flex flex-col items-center">
         <motion.h2 
-          className="font-bold text-3xl md:text-4xl mt-5 mb-20 text-center"
+          className="font-bold text-3xl md:text-4xl mt-5 mb-20 text-center dark:text-white"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 0.4 }}
           viewport={{ once: true }}
-        >Specialized In</motion.h2>
+        >Specialized <span className="text-[#7E74F1]">In</span></motion.h2>
         <motion.div 
         className="flex items-center justify-center md:gap-x-6 gap-y-6 flex-wrap mb-10 mx-2 md:mb-0 md:w-4/5"
         variants={cardVariants}

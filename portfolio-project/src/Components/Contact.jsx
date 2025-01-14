@@ -76,7 +76,7 @@ const Contact = () => {
       }
 
   return (
-    <section className="bg-white md:h-[600px]" id='contact'>
+    <section className="bg-white dark:bg-[#1E1E1E] md:h-[600px]" id='contact'>
         <div className="md:w-4/5 mx-auto px-4 md:px-0">
             <div className="flex items-center gap-x-5 pt-10 mb-10">
                 <svg width="20" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -146,7 +146,7 @@ const Contact = () => {
                             <AddressSVG />
                         </div>
                         <div>
-                            <div className="title font-semibold">Address</div>
+                            <div className="title font-semibold dark:text-white">Address</div>
                             <div className="body text-gray-500">HN6 Travl&apos;s Cls O&apos;Sullivan, Baatsona District</div>
                         </div>
                     </motion.div>
@@ -158,7 +158,7 @@ const Contact = () => {
                             <PhoneSVG />
                         </div>
                         <div>
-                            <div className="title font-semibold">Phone</div>
+                            <div className="title font-semibold dark:text-white">Phone</div>
                             <div className="body text-gray-500">+233500562532</div>
                         </div>
                     </motion.div>
@@ -170,7 +170,7 @@ const Contact = () => {
                             <EmailSVG />
                         </div>
                         <div>
-                            <div className="title font-semibold">Email</div>
+                            <div className="title font-semibold dark:text-white">Email</div>
                             <div className="body text-gray-500">asampongg377@gmail.com</div>
                         </div>
                     </motion.div>
@@ -179,7 +179,7 @@ const Contact = () => {
         </div>
         <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
             <h2 className="text-3xl font-bold text-purple-500 mb-4 text-center">Message Sent</h2>
-            <p className="text-center">{"Thank you for reaching out. I'll get back to you as soon as possible."}</p>
+            <p className="text-center dark:text-white">{"Thank you for reaching out. I'll get back to you as soon as possible."}</p>
         </Modal>
     </section>
   )
