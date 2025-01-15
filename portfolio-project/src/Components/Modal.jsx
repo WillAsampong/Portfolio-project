@@ -9,7 +9,7 @@ const Modal = ({ isOpen, onClose, children }) => {
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-20 z-20">
         {/* modal */}
         <motion.div
-         className="bg-white dark:bg-slate-600 rounded-xl p-8 shadow-lg max-w-sm w-full relative"
+         className="bg-white dark:bg-slate-600 rounded-xl p-8 shadow-lg max-w-xs md:max-w-sm w-full relative"
          initial={{ opacity: 1, scale: 0.7 }}
          animate={{ opacity: 1, scale: 1.0 }}
          exit={{ opacity: 0, scale: 0 }}
