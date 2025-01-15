@@ -5,27 +5,13 @@ import CloseSVG from './SVGs/CloseSVG'
 import GithubSVG from "./SVGs/GithubSVG"
 import LinkedInSVG from "./SVGs/LinkedInSVG"
 import TwitterSVG from "./SVGs/TwitterSVG"
-import MoonSVG from "./SVGs/MoonSVG"
-import SunSVG from "./SVGs/SunSVG"
 import { motion } from "motion/react"
 
 const Header = () => {
 
   const [shadow, setShadow] = useState(false);
   const [open, setOpen] = useState(false);
-  const [darkToggle, setDarkToggle] = useState(
-    localStorage.getItem('theme') === 'dark'
-  );
-
-  useEffect(() => {
-    if(darkToggle) {
-      document.querySelector('html').classList.add('dark');
-      localStorage.setItem("theme", 'dark')
-    } else{
-      document.querySelector('html').classList.remove('dark')
-      localStorage.setItem("theme", 'light')
-    }
-  }, [darkToggle])
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,7 +22,6 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, []);
 
-  const toggleDarkMode = () => setDarkToggle(!darkToggle);
 
   const pageUp = () => {
     window.scrollTo({ top: (0, 0), behavior: "smooth" })
@@ -114,7 +99,7 @@ const Header = () => {
           
           {/* Mobile menu */}
 
-          <div className={`mobile-menu absolute ${ open ? "left-0" : "-left-full " } transition-all duration-500 top-16 w-full h-screen bg-white md:hidden`}>
+          <div className={`mobile-menu absolute ${ open ? "left-0" : "-left-full " } transition-all duration-500 top-16 w-full h-screen bg-white md:hidden dark:bg-[#1E1E1E]`}>
             <div className="md:hidden absolute top-0 left-10 translate-y-1/2 ">
               <motion.ul 
               className="flex flex-col gap-y-6"
@@ -148,13 +133,9 @@ const Header = () => {
         </nav>
 
         {/* Right Content */}
-        <div className="flex gap-x-4">
-          <div className="theme-toggle p-2 border rounded-md cursor-pointer" onClick={toggleDarkMode}>
-            { darkToggle ? <SunSVG /> : <MoonSVG /> }
-          </div>
-          <div className="resume hidden md:flex">
-            <button className="px-4 py-2 rounded-md border">Resume</button>
-          </div>
+        
+        <div className="resume hidden md:flex">
+          <button className="px-4 py-2 rounded-md border">Resume</button>
         </div>
       </div>
     </header>
