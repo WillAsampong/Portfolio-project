@@ -11,7 +11,7 @@ import Skills from './Components/Skills'
 function App() {
 
   return (
-    <div className='relative'>
+    <div className='relative dark:bg-[#1E1E1E]'>
       <Header />
       <Hero />
       <Skills />
