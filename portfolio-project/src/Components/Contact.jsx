@@ -62,7 +62,7 @@ const Contact = () => {
             opacity: 1,
             y: 0,
             transition: {
-                staggerChildren: 0.7,
+                staggerChildren: 0.5,
                 duration: 0.5,
                 delay: 0.5,
                 ease: 'easeIn',
