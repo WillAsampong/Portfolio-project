@@ -56,13 +56,13 @@ const Contact = () => {
     const contactVariants = {
         hidden: {
             opacity: 0,
-            y: 30,
+            y: 50,
         },
         visible: {
             opacity: 1,
             y: 0,
             transition: {
-                staggerChildren: 0.5,
+                staggerChildren: 0.7,
                 duration: 0.5,
                 delay: 0.5,
                 ease: 'easeIn',
@@ -71,8 +71,14 @@ const Contact = () => {
     }
 
     const itemVariants = {
-        hidden: { opacity: 0, y: 0 },
-        visible: { opacity: 1, y: 30 },
+        hidden: { 
+            opacity: 0,
+            y: 0, 
+            },
+        visible: { 
+            opacity: 1,
+            y: 30,
+            },
       }
 
   return (
@@ -131,11 +137,11 @@ const Contact = () => {
                     </form>
                 </motion.div>
                 <motion.div 
-                className="get-in-touch mt-6 md:flex-1 md:ml-6 flex flex-col gap-y-12"
+                className="get-in-touch mt-6 md:flex-1 md:ml-6 flex flex-col gap-y-12 mb-20 md:mb-0"
                 variants={contactVariants}
                 initial="hidden"
                 whileInView="visible"
-                transition={{ delay: 0.5 }}
+                transition={{ delay: 0.7 }}
                 viewport={{ once: true }}
                 >
                     <motion.div

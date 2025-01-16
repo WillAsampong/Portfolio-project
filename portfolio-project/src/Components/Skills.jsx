@@ -1,8 +1,7 @@
-
 import AnalyticsSVG from "./SVGs/AnalyticsSVG";
 import GitSVG1 from "./SVGs/GitSVG1";
 import GlobeSVG from "./SVGs/GlobeSVG";
-import {  motion } from 'motion/react'
+import { motion } from 'motion/react'
 
 const Skills = () => {
   const cardVariants  = {
@@ -10,14 +9,15 @@ const Skills = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.5,
+        staggerChildren: 0.7,
+        delay: 0.5,
       }
     }
   }
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0 }
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { ease: "easeIn" } }
   }
 
   return (
@@ -48,10 +48,11 @@ const Skills = () => {
         initial='hidden'
         whileInView='visible'
         transition={{ delay: 0.5, duration: 0.7 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, margin: "20px" }}
         >
           <motion.div className="skill-card md:flex-1 flex flex-col items-center gap-y-4 py-10 px-5 rounded-md bg-white shadow-md"
           variants={itemVariants}
+          viewport={{ amount: "0px" }}
           >
             <div className="web-icon bg-[#F5F3FE] p-4 rounded-lg">
               <GlobeSVG />
@@ -74,6 +75,7 @@ const Skills = () => {
           <motion.div className="skill-card md:flex-1 flex flex-col items-center gap-y-4 py-10 px-5 rounded-md bg-white shadow-md
           "
           variants={itemVariants}
+          viewport={{ amount: "0px" }}
           >
             <div className="web-icon bg-[#F5F3FE] p-4 rounded-lg">
               <AnalyticsSVG />
@@ -91,6 +93,7 @@ const Skills = () => {
           </motion.div>
           <motion.div className="skill-card md:flex-1 flex flex-col items-center gap-y-4 py-10 px-5 rounded-md bg-white shadow-md"
           variants={itemVariants}
+          viewport={{ amount: "0px" }}
           >
             <div className="web-icon bg-[#F5F3FE] p-4 rounded-lg">
               <GitSVG1 />
