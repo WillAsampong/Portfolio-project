@@ -89,6 +89,7 @@ const Skills = () => {
             <div className="tools flex gap-x-2 flex-wrap">
               <span className="bg-[#7E74F1] rounded py-1 px-2 shadow-sm text-white text-xs">Python</span>
               <span className="bg-[#7E74F1] rounded py-1 px-2 shadow-sm text-white text-xs">R</span>
+              <span className="bg-[#7E74F1] rounded py-1 px-2 shadow-sm text-white text-xs">Excel</span>
             </div>
           </motion.div>
           <motion.div className="skill-card md:flex-1 flex flex-col items-center gap-y-4 py-10 px-5 rounded-md bg-white shadow-md"
