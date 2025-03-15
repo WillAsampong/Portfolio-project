@@ -93,7 +93,7 @@ const Header = () => {
             ))}
           </ul>
 
-          <div className="mobile-menu-btn md:hidden " onClick={isOpen}>
+          <div className="mobile-menu-btn md:hidden" onClick={isOpen}>
             {open ? <CloseSVG /> : <HamburgerSVG />}
           </div>
           

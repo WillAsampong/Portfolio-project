@@ -153,7 +153,7 @@ const Contact = () => {
                         </div>
                         <div>
                             <div className="title font-semibold dark:text-white">Address</div>
-                            <div className="body text-gray-500">HN6 Travl&apos;s Cls O&apos;Sullivan, Baatsona District</div>
+                            <div className="body text-gray-500 dark:text-gray-300 font-light">HN6 Travl&apos;s Cls O&apos;Sullivan, Baatsona District</div>
                         </div>
                     </motion.div>
                     <motion.div 
@@ -165,7 +165,7 @@ const Contact = () => {
                         </div>
                         <div>
                             <div className="title font-semibold dark:text-white">Phone</div>
-                            <div className="body text-gray-500">+233500562532</div>
+                            <div className="body text-gray-500 dark:text-gray-300 font-light"><a href="https://wa.me/+233500562532" target='_blank'>+233500562532</a></div>
                         </div>
                     </motion.div>
                     <motion.div 
@@ -177,7 +177,7 @@ const Contact = () => {
                         </div>
                         <div>
                             <div className="title font-semibold dark:text-white">Email</div>
-                            <div className="body text-gray-500">asampongg377@gmail.com</div>
+                            <div className="body text-gray-500 dark:text-gray-300 font-light"><a href="mailto:asampongg377@gmail.com">asampongg377@gmail.com</a></div>
                         </div>
                     </motion.div>
                 </motion.div>
