@@ -1,5 +1,5 @@
 // import { Link } from "react-router-dom"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import HamburgerSVG from './SVGs/HamburgerSVG'
 import CloseSVG from './SVGs/CloseSVG'
 import GithubSVG from "./SVGs/GithubSVG"
@@ -9,18 +9,18 @@ import { motion } from "motion/react"
 
 const Header = () => {
 
-  const [shadow, setShadow] = useState(false);
+  // const [shadow, setShadow] = useState(false);
   const [open, setOpen] = useState(false);
   
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setShadow(window.scrollY > 50);
-    }
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setShadow(window.scrollY > 50);
+  //   }
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, []);
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => window.removeEventListener('scroll', handleScroll)
+  // }, []);
 
 
   const pageUp = () => {
@@ -34,12 +34,12 @@ const Header = () => {
 
   const navlinks = [
     {
-      name: "Skills",
-      link: "#skills",
-    },
-    {
       name: "About", 
       link: "#about",
+    },
+    {
+      name: "Skills",
+      link: "#skills",
     },
     {
       name: "Projects",
@@ -76,19 +76,20 @@ const Header = () => {
   }
 
   return (
-    <header className={`py-4 px-2 md:px-0 ${shadow ? 'shadow-md' : ''} fixed top-0 left-0 right-0 dark:bg-[#1E1E1E] bg-white text-black dark:text-white z-50 transition-shadow duration-300`}>
+    <header className={`py-4 px-6 md:px-0 shadow-md fixed top-0 left-0 right-0 text-black z-50 transition-shadow duration-300 mx-auto md:mt-4 md:rounded-full dark:border-[#1E1E1E] backdrop-blur-md bg-white/30 dark:bg-white/30 md:w-3/5`}>
       <div className="md:w-4/5 mx-auto flex justify-between items-center">
         <div className="flex items-center gap-x-2 cursor-pointer" onClick={pageUp}>
           <div className="name">
-            <p className="font-bold">Will</p>
+            <p className="font-bold md:text-md dark:text-white uppercase tracking-wider">Will</p>
           </div>
         </div>
         
         <nav>
-          <ul className="md:flex gap-x-6 hidden">
+          <ul className="md:flex md:items-center gap-x-8 hidden">
             {navlinks.map((item) => (
-              <li key={item.name} className="hover:text-[#7E74F1] font-semibold transition-all duration-500">
+              <li key={item.name} className="group relative text-gray-500 dark:text-gray-300 hover:text-[#7E74F1] font-medium transition-colors duration-300">
                 <a href={item.link}>{item.name}</a>
+                <span className="absolute left-0 -bottom-1 h-[1.5px] w-full bg-[#7E74F1] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 ease-out"></span>
               </li>
             ))}
           </ul>
@@ -99,7 +100,7 @@ const Header = () => {
           
           {/* Mobile menu */}
 
-          <div className={`mobile-menu absolute ${ open ? "left-0" : "-left-full " } transition-all duration-500 top-16 w-full h-screen bg-white md:hidden dark:bg-[#1E1E1E]`}>
+          <div className={`mobile-menu absolute ${ open ? "left-0" : "-left-full " } transition-all duration-500 top-16 w-full h-screen bg-white md:hidden dark:bg-[#000000] dark:text-white`}>
             <div className="md:hidden absolute top-0 left-10 translate-y-1/2 ">
               <motion.ul 
               className="flex flex-col gap-y-6"
@@ -135,7 +136,24 @@ const Header = () => {
         {/* Right Content */}
         
         <div className="resume hidden md:flex">
-          <button className="px-4 py-2 rounded-md border">Resume</button>
+          <button className="flex items-center gap-x-2 bg-black text-white px-5 py-2.5 rounded-full font-medium text-sm hover:bg-gray-800 transition-colors duration-300">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            Resume
+          </button>
         </div>
       </div>
     </header>

@@ -82,7 +82,7 @@ const Contact = () => {
       }
 
   return (
-    <section className="bg-white dark:bg-[#1E1E1E] md:h-[600px]" id='contact'>
+    <section className="dark:bg-[#1E1E1E] md:h-[600px]">
         <div className="md:w-4/5 mx-auto px-4 md:px-0">
             <div className="flex items-center gap-x-5 pt-10 mb-10">
                 <svg width="20" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
