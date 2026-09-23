@@ -148,7 +148,7 @@ function ProjectShowcase({ project }) {
 
 const FeaturedProjects = () => {
   return (
-    <section className="min-h-screen md:py-32" id="projects">
+    <section className="min-h-screen md:py-40" id="projects">
       <div className="w-4/5 mx-auto">
         <div className="flex flex-col items-center justify-center">
           <div className="flex items-center gap-x-5 pt-10">
