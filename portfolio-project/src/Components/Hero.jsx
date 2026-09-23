@@ -68,8 +68,9 @@ const Hero = () => {
             transition={{ delay: 1.3, duration: 1, ease: "easeOut" }}
           >
             <a
-              href="/resume.pdf"
-              download
+              href="/Asampong_Godswill_Nana_Resume.pdf"
+              download="Asampong_Godswill_Nana_Resume.pdf"
+              rel="noopener noreferrer"
               className="flex items-center gap-x-2 bg-[#7E74F1] text-white px-6 py-3 rounded-full font-medium text-sm hover:bg-[#6a60e0] transition-colors duration-300"
             >
               <svg

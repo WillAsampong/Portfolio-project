@@ -136,7 +136,7 @@ const Header = () => {
         {/* Right Content */}
         
         <div className="resume hidden md:flex">
-          <button className="flex items-center gap-x-2 bg-black text-white px-5 py-2.5 rounded-full font-medium text-sm hover:bg-gray-800 transition-colors duration-300">
+          <a href="/Asampong_Godswill_Nana_Resume.pdf" download="Asampong_Godswill_Nana_Resume.pdf" rel="noopener noreferrer" className="flex items-center gap-x-2 bg-black text-white px-5 py-2.5 rounded-full font-medium text-sm hover:bg-gray-800 transition-colors duration-300">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -153,7 +153,7 @@ const Header = () => {
               <line x1="12" y1="15" x2="12" y2="3" />
             </svg>
             Resume
-          </button>
+          </a>
         </div>
       </div>
     </header>
