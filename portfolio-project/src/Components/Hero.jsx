@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const Hero = () => {
   return (
     <section className="text-black dark:text-white ">
-      <div className="w-full flex md:flex md:flex-row flex-col-reverse min-h-screen md:h-screen items-center md:w-3/4 mx-auto md:justify-between gap-x-8 ">
+      <div className="w-full flex md:flex md:flex-row flex-col-reverse min-h-screen md:h-screen items-center md:w-3/4 mx-auto md:justify-between md:gap-x-8 gap-y-10">
         {/* Text Section */}
         <div className="hero flex-1 px-4 md:px-0 gap-y-4 flex flex-col justify-center items-center md:items-start">
           <motion.span 
@@ -144,9 +144,9 @@ const Hero = () => {
         </div>
 
         {/* Hero Image */}
-        <div className="flex-1 w-auto flex justify-center items-center mt-10 md:mt-0">
+        <div className="flex-1 w-auto flex justify-center items-center mt-20 md:mt-0">
           <motion.div
-            className="hero-img aspect-square rounded-full w-[250px] md:w-[350px] relative"
+            className="hero-img aspect-square rounded-full w-[220px] md:w-[350px] relative"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{
