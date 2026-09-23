@@ -126,7 +126,7 @@ const Header = () => {
               >
                 <a href="https://github.com/WillAsampong" target="blank"><GithubSVG /></a>
                 <a href="https://x.com/WillAsampong19" target="blank"><TwitterSVG /></a>
-                <LinkedInSVG />
+                <a href="https://www.linkedin.com/in/godswill-nana-asampong-b50273294/" target="blank"><LinkedInSVG /></a>
               </motion.div>
             </div>
           </div>

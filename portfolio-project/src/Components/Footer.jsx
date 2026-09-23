@@ -22,7 +22,7 @@ const Footer = () => {
                 <div className="social-links flex gap-x-6 ">
                     <a href="https://github.com/WillAsampong" target="blank" className="p-2 bg-gray-400 hover:bg-[#2D3748] transition-all ease-in-out rounded-full"><GithubSVG /></a>
                     <a href="https://x.com/WillAsampong19" target="blank" className="p-2 bg-gray-400 hover:bg-[#2D3748] transition-all ease-in-out rounded-full"><TwitterSVG /></a>
-                    <a href="https://www.linkedin.com/in/will-asampong-7b3b3b2b3/" target="blank" className="p-2 bg-gray-400 hover:bg-[#2D3748] transition-all ease-in-out rounded-full"><LinkedInSVG /></a>
+                    <a href="https://www.linkedin.com/in/godswill-nana-asampong-b50273294/" target="blank" className="p-2 bg-gray-400 hover:bg-[#2D3748] transition-all ease-in-out rounded-full"><LinkedInSVG /></a>
                 </div>
                 <div className="copyright text-gray-500">
                     &copy; {year} - Asampong Godswill Nana
