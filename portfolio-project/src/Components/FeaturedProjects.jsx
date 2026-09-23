@@ -149,7 +149,7 @@ function ProjectShowcase({ project }) {
 const FeaturedProjects = () => {
   return (
     <section className="min-h-screen md:py-40" id="projects">
-      <div className="w-4/5 mx-auto">
+      <div className="w-4/5 mx-auto mb-12">
         <div className="flex flex-col items-center justify-center">
           <div className="flex items-center gap-x-5 pt-10">
             <svg width="20" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
